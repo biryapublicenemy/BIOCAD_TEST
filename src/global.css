@@ -1,0 +1,14 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --cysteine: #ffea00; /* Цистеин – C */
+  --hydrophobic: #67e4a6; /* Гидрофобные – A, I, L, M, F, W, Y, V, P */
+  --glycine: #c4c4c4; /* Глицин – G */
+  --negatively-charged: #fc9cac; /* Отрицательно заряженные – D, E */
+  --positively-charged: #bb99ff; /* Положительно заряженные – K, R */
+  --polar-uncharged: #80bfff; /* Полярные незаряженные – S, T, H, Q, N */
+}
