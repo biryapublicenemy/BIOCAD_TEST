@@ -24,7 +24,16 @@ export const AMINO_ACIDS = [
 
 export type AminoAcid = (typeof AMINO_ACIDS)[number];
 
-const COLOR_SCHEME: Record<string, string> = {
+export type TypeColors =
+  | 'hydrophobic'
+  | 'negativelyCharged'
+  | 'positivelyCharged'
+  | 'polarUncharged'
+  | 'cysteine'
+  | 'gap'
+  | 'glycine';
+
+const COLOR_SCHEME: Record<TypeColors, string> = {
   hydrophobic: '#67E4A6',
   negativelyCharged: '#FC9CAC',
   positivelyCharged: '#BB99FF',
@@ -34,7 +43,7 @@ const COLOR_SCHEME: Record<string, string> = {
   glycine: '#C4C4C4',
 };
 
-const AMINO_ACID_GROUPS: Record<AminoAcid, keyof typeof COLOR_SCHEME> = {
+const AMINO_ACID_GROUPS: Record<AminoAcid, TypeColors> = {
   A: 'hydrophobic', // Гидрофобные
   R: 'positivelyCharged', // Положительно заряженные
   N: 'polarUncharged', // Полярные незаряженные
