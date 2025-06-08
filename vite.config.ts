@@ -10,5 +10,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom'],
   },
-  base: '/biocad_test/',
+  base: process.env.NODE_ENV === 'production' ? '/biocad_test/' : '/',
+  server: {
+    port: 3000,
+    strictPort: true,
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+  },
 });
